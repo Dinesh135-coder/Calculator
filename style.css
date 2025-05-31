@@ -46,3 +46,12 @@ td:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 10px;}
+
+
+  #process {
+  font-size: 16px;
+  color: gray;
+  text-align: right;
+  margin-bottom: 5px;
+}
+

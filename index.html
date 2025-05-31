@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Simple Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h2>Simple Table Calculator</h2>
-<div id="display">0</div>
+  <h2>Simple Table Calculator</h2>
+  <div id="process "></div>
 
-<table>
-  <tr>
+  <div id="display">0</div>
+
+  <table>
+    <tr>
+      <td onclick="root()">√</td>
+      <td onclick="square()">x²</td>
+      
+    </tr>
     <td onclick="press('7')">7</td>
     <td onclick="press('8')">8</td>
     <td onclick="press('9')">9</td>
     <td onclick="press('/')">÷</td>
-  </tr>
-  <tr>
-    <td onclick="press('4')">4</td>
-    <td onclick="press('5')">5</td>
-    <td onclick="press('6')">6</td>
-    <td onclick="press('*')">×</td>
-  </tr>
-  <tr>
-    <td onclick="press('1')">1</td>
-    <td onclick="press('2')">2</td>
-    <td onclick="press('3')">3</td>
-    <td onclick="press('-')">-</td>
-  </tr>
-  <tr>
-    <td onclick="press('.')">.</td>
-    <td onclick="press('0')">0</td>
-    <td onclick="calculate()">=</td>
-    <td onclick="press('+')">+</td>
-  </tr>
-  <tr>
-    <td colspan="4" onclick="clearDisplay()">Clear</td>
-  </tr>
-</table>
+    </tr>
+    <tr>
+      <td onclick="press('4')">4</td>
+      <td onclick="press('5')">5</td>
+      <td onclick="press('6')">6</td>
+      <td onclick="press('*')">×</td>
+    </tr>
+    <tr>
+      <td onclick="press('1')">1</td>
+      <td onclick="press('2')">2</td>
+      <td onclick="press('3')">3</td>
+      <td onclick="press('-')">-</td>
+    </tr>
+    <tr>
+      <td onclick="press('.')">.</td>
+      <td onclick="press('0')">0</td>
+      <td onclick="calculate()">=</td>
+      <td onclick="press('+')">+</td>
+    </tr>
+    <tr>
+      <td colspan="4" onclick="clearDisplay()">Clear</td>
+    </tr>
+  </table>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

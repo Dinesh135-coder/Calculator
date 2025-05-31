@@ -1,10 +1,10 @@
 // Store the current input value
 const DEFAULT_INPUT = "0";
-let input = DEFAULT_INPUT ;
+let input = DEFAULT_INPUT;
 
 // Called when a button is clicked (number or operator)
 function press(key) {
- 
+
   // Add the key to the input string
   input += key;
 
@@ -14,7 +14,11 @@ function press(key) {
 
 
 // Called when the equals button is clicked
-function calculate() {
+function calculate(){
+if (input === "") {
+  return;
+}
+// If input is empty, do nothing
   try {
     // Use eval to calculate the input
     let result = eval(input);
@@ -26,6 +30,9 @@ function calculate() {
   catch (error) {
     // If there's an error, show "Error" on the display
     document.getElementById("display").innerText = "Invalid input";
+  } finally {
+    // Reset the input to default after calculation
+    input = "";
   }
 }
 
@@ -34,3 +41,5 @@ function clearDisplay() {
   input = DEFAULT_INPUT;
   document.getElementById("display").innerText = "0";
 }
+
+

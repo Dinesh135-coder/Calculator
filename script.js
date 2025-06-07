@@ -41,8 +41,8 @@ function calculate() {
 function root() {
 
   try {
-    console.log("input=" + input);
-    console.log("previousInput=" + previousResult);
+     console.log("input=" + input);
+     console.log("previousInput=" + previousResult);
     if (input === DEFAULT_INPUT && previousResult != DEFAULT_INPUT) {
       input = previousResult;
     }
@@ -59,21 +59,35 @@ function root() {
     document.getElementById("display").innerText = "Error";
   } finally {
     resetInput() // Reset input after calculating
-  }
+  }  
 }
+
 
 function square() {
   try {
-    let value = eval(input); // Use input instead of currentInput
-    let result = value * value;
-    document.getElementById("display").innerText = result;
+    console.log("input=" + input);
+    console.log("previousInput=" + previousResult);
+
+    if (input === DEFAULT_INPUT && previousResult !== DEFAULT_INPUT) {
+      input = previousResult;
+    }
+
+    let value = eval(input);
+    console.log("value=" + value);
+
+    if (value === undefined || isNaN(value)) {
+      document.getElementById("display").innerText = "Invalid";
+    } else {
+      let result = value * value;
+      console.log("result=" + result);
+      document.getElementById("display").innerText = result;
+    }
   } catch {
     document.getElementById("display").innerText = "Error";
   } finally {
     resetInput(); // Reset input after calculating
   }
 }
-
 
 // to clear the display
 function clearDisplay() {
